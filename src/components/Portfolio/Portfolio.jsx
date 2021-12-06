@@ -9,7 +9,7 @@ function Portfolio() {
       sx={{
         width: 2 / 2,
         height: 650,
-        backgroundColor: "primary.dark",
+        backgroundColor: "primary.light",
       }}
     >
       <Typography variant="h2" className="centerTxt" sx={{ pt: 8 }}>
@@ -32,8 +32,9 @@ function Portfolio() {
           </Typography>
           <br />
           <Button
-            color="error"
             size="medium"
+            color="secondary"
+            variant="contained"
             onClick={() => {
               window.open(
                 "https://github.com/Thirteenhelens/From_the_Apple_Tree",

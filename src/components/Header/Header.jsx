@@ -1,18 +1,15 @@
-import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 function Header() {
   return (
-    <header>
-      <Box
-        sx={{
-          width: 2 / 2,
-          height: 75,
-          backgroundColor: "primary.dark",
-        }}
-      >
-        <p>Head</p>
-      </Box>
-    </header>
+    <Typography
+      variant="h5"
+      sx={{ pl: 2 }}
+      color="primary.dark"
+      backgroundColor="secondary.dark"
+    >
+      Jack Barrett
+    </Typography>
   );
 }
 

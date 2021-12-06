@@ -5,9 +5,21 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import MailTwoToneIcon from "@mui/icons-material/MailTwoTone";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
 
 function Contact() {
+  const buttonTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#9799CA",
+      },
+      secondary: {
+        main: "#D6E5E3",
+      },
+    },
+  });
+
   return (
     <Box
       sx={{
@@ -29,7 +41,7 @@ function Contact() {
         <Card
           sx={{
             width: 400,
-            //  backgroundColor: "primary.dark",
+            backgroundColor: "secondary",
           }}
         >
           <CardContent>
@@ -38,7 +50,9 @@ function Contact() {
               spacing={2}
             >
               <div className="centerTxt">
-                <LocationOnTwoToneIcon />
+                <ThemeProvider theme={buttonTheme}>
+                  <LocationOnTwoToneIcon color="primary" />
+                </ThemeProvider>
                 <Typography variant="h5">Locale</Typography>
               </div>
 
@@ -52,27 +66,29 @@ function Contact() {
         <Card
           sx={{
             width: 400,
-            //  backgroundColor: "primary.dark",
+            backgroundColor: "secondary",
           }}
         >
           <CardContent>
             <Stack
-              divider={<Divider orientation="horizontal" flexItem />}
               spacing={2}
+              divider={<Divider orientation="horizontal" flexItem />}
             >
               <div className="centerTxt">
-                <MailTwoToneIcon />
+                <ThemeProvider theme={buttonTheme}>
+                  <MailTwoToneIcon color="primary" />
+                </ThemeProvider>
                 <Typography variant="h5">Email</Typography>
               </div>
 
               <Typography className="centerTxt" variant="subtitle2">
-                jbarrett1347@gmail.com
+                Jbarrett1347@gmail.com
               </Typography>
             </Stack>
           </CardContent>
         </Card>
       </Stack>
-      <Typography variant="body1" className="centerTxt" sx={{mt:10}}>
+      <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
         &copy; Jack Barrett 2021
       </Typography>
     </Box>

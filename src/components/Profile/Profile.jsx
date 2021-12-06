@@ -5,14 +5,25 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 function Profile() {
+  const buttonTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#235789",
+      },
+      secondary: {
+        main: "#D6E5E3",
+      },
+    },
+  });
   return (
     <Box
       sx={{
         width: 2 / 2,
         height: 700,
-        backgroundColor: "primary.dark",
+        backgroundColor: "primary.main",
       }}
     >
       <Stack direction="row" spacing={14}>
@@ -28,28 +39,31 @@ function Profile() {
               Jack Barrett
             </Typography>
             <Typography variant="overline">Software Developer</Typography>
-
             <br />
 
-            <IconButton
-              aria-label="GitHub"
-              onClick={() => {
-                window.open("https://github.com/Thirteenhelens", "_blank");
-              }}
-            >
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-              aria-label="LinkedIn"
-              onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/in/jack-barrett-0b7bba1b0/",
-                  "_blank"
-                );
-              }}
-            >
-              <LinkedInIcon />
-            </IconButton>
+            <ThemeProvider theme={buttonTheme}>
+              <IconButton
+                color="primary"
+                aria-label="GitHub"
+                onClick={() => {
+                  window.open("https://github.com/Thirteenhelens", "_blank");
+                }}
+              >
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                color="primary"
+                aria-label="LinkedIn"
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/jack-barrett-0b7bba1b0/",
+                    "_blank"
+                  );
+                }}
+              >
+                <LinkedInIcon />
+              </IconButton>
+            </ThemeProvider>
           </div>
         </Box>
 
@@ -60,8 +74,8 @@ function Profile() {
 
           <br />
 
-          <Typography variant="body1" className="centerTxt">
-            Good question! As a lifelong gamer, I have a vested interest in
+          <Typography variant="body1">
+            Good question, as a lifelong gamer, I have a vested interest in
             technology. Not just overall, but all of the intricacies behind how
             things work. As I grew up, my intrigue increased and I started
             looking into how all of my favorite technologies seemed to magically
