@@ -23,11 +23,11 @@ function Profile() {
             sx={{ width: 350, height: 350 }}
           />
 
-          <div className="meTXT">
+          <div className="centerTxt">
             <Typography variant="h4" sx={{ mt: 2 }}>
               Jack Barrett
             </Typography>
-            <Typography variant="overline">Software Engineer</Typography>
+            <Typography variant="overline">Software Developer</Typography>
 
             <br />
 
@@ -54,13 +54,13 @@ function Profile() {
         </Box>
 
         <Box sx={{ pt: 25, pr: 10 }}>
-          <Typography variant="h2" className="whoTXT">
+          <Typography variant="h2" className="centerTxt">
             Who am I?
           </Typography>
 
           <br />
 
-          <Typography variant="body1" className="whoTXT">
+          <Typography variant="body1" className="centerTxt">
             Good question! As a lifelong gamer, I have a vested interest in
             technology. Not just overall, but all of the intricacies behind how
             things work. As I grew up, my intrigue increased and I started

@@ -4,27 +4,27 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailTwoToneIcon from "@mui/icons-material/MailTwoTone";
+import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
 
 function Contact() {
   return (
-        <Box
-        sx={{
-          width: 2 / 2,
-          height: 500,
-          backgroundColor: "primary.dark",
-        }}
-      >
-        <Typography variant="h2" className="centerTxt" sx={{ pt: 8 }}>
-          Contact me
-        </Typography>
+    <Box
+      sx={{
+        width: 2 / 2,
+        height: 500,
+        backgroundColor: "primary.dark",
+      }}
+    >
+      <Typography variant="h2" className="centerTxt" sx={{ pt: 8 }}>
+        More me
+      </Typography>
 
-        <br />
-        <br />
-        <br />
-        <br />
-        
+      <br />
+      <br />
+      <br />
+      <br />
+
       <Stack direction="row" spacing={14} justifyContent="center">
         <Card
           sx={{
@@ -38,7 +38,7 @@ function Contact() {
               spacing={2}
             >
               <div className="centerTxt">
-                <LocationOnIcon />
+                <LocationOnTwoToneIcon />
                 <Typography variant="h5">Locale</Typography>
               </div>
 
@@ -72,7 +72,7 @@ function Contact() {
           </CardContent>
         </Card>
       </Stack>
-      <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
+      <Typography variant="body1" className="centerTxt" sx={{mt:10}}>
         &copy; Jack Barrett 2021
       </Typography>
     </Box>
