@@ -74,8 +74,8 @@ function Profile() {
 
           <br />
 
-          <Typography variant="body1">
-            Good question, as a lifelong gamer, I have a vested interest in
+          <Typography variant="body1" sx={{ textAlign: "center" }}>
+            Good question! As a lifelong gamer, I have a vested interest in
             technology. Not just overall, but all of the intricacies behind how
             things work. As I grew up, my intrigue increased and I started
             looking into how all of my favorite technologies seemed to magically
