@@ -34,7 +34,7 @@ function Profile() {
       <Grid container>
         <Grid item xs={12} md={5}>
           <Stack variant="column" className="centerTxt">
-            <div className='profileContainer'>
+            <div className="profileContainer">
               <img
                 alt="Me Crouching. I am looking cool."
                 src="../senior-crouching-photo.jpeg"

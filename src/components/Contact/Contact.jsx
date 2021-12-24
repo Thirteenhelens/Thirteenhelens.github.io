@@ -32,19 +32,14 @@ function Contact() {
       }}
     >
       <Grid container>
-        {/*  */}
         <Grid item xs={12} md={12}>
           <Typography variant="h2" className="centerTxt" sx={{ pt: 8, pb: 10 }}>
             More me
           </Typography>
         </Grid>
-        {/*  */}
 
-        {/*  */}
         <Grid item xs={2} md={2} />
-        {/*  */}
 
-        {/*  */}
         <Grid item xs={12} md={3}>
           <Card
             sx={{
@@ -72,11 +67,8 @@ function Contact() {
           </Card>
         </Grid>
 
-        {/*  */}
         <Grid item xs={12} md={1.5} />
-        {/*  */}
 
-        {/*  */}
         <Grid item xs={12} md={3}>
           <Card
             sx={{
@@ -103,18 +95,13 @@ function Contact() {
             </CardContent>
           </Card>
         </Grid>
-        {/*  */}
 
-        {/*  */}
         <Grid item xs={0.5} md={2} />
-        {/*  */}
 
-        {/*  */}
         <Grid item xs={12} md={12}>
           <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
             &copy; Jack Barrett 2021
           </Typography>
-          {/*  */}
         </Grid>
       </Grid>
     </Box>
