@@ -1,5 +1,6 @@
 import "./App.css";
 import * as React from "react";
+import { Grid } from "@mui/material";
 import Header from "../Header/Header";
 import Profile from "../Profile/Profile";
 import Contact from "../Contact/Contact";
@@ -27,15 +28,23 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Header id="introduction-to-everything" />
+        <Grid container>
+          <Grid item xs={12}>
+            <Header />
+          </Grid>
 
-        {/* <img src="../wow_crazy.jpg" alt="Practically a concrete wall" style={{width:1440}} /> */}
+          <Grid item xs={12}>
+            <Profile />
+          </Grid>
 
-        <Profile />
+          <Grid item xs={12}>
+            <Portfolio />
+          </Grid>
 
-        <Portfolio />
-
-        <Contact />
+          <Grid item xs={12}>
+            <Contact />
+          </Grid>
+        </Grid>
       </ThemeProvider>
     </div>
   );

@@ -1,11 +1,15 @@
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import Stack from "@mui/material/Stack";
-import Divider from "@mui/material/Divider";
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
+import {
+  Box,
+  Grid,
+  Card,
+  Stack,
+  Divider,
+  Typography,
+  CardContent,
+  createTheme,
+  ThemeProvider,
+} from "@mui/material";
 import MailTwoToneIcon from "@mui/icons-material/MailTwoTone";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
 
 function Contact() {
@@ -24,73 +28,95 @@ function Contact() {
     <Box
       sx={{
         width: 2 / 2,
-        height: 500,
         backgroundColor: "primary.dark",
       }}
     >
-      <Typography variant="h2" className="centerTxt" sx={{ pt: 8 }}>
-        More me
-      </Typography>
+      <Grid container>
+        {/*  */}
+        <Grid item xs={12} md={12}>
+          <Typography variant="h2" className="centerTxt" sx={{ pt: 8, pb: 10 }}>
+            More me
+          </Typography>
+        </Grid>
+        {/*  */}
 
-      <br />
-      <br />
-      <br />
-      <br />
+        {/*  */}
+        <Grid item xs={2} md={2} />
+        {/*  */}
 
-      <Stack direction="row" spacing={14} justifyContent="center">
-        <Card
-          sx={{
-            width: 400,
-            backgroundColor: "secondary",
-          }}
-        >
-          <CardContent>
-            <Stack
-              divider={<Divider orientation="horizontal" flexItem />}
-              spacing={2}
-            >
-              <div className="centerTxt">
-                <ThemeProvider theme={buttonTheme}>
-                  <LocationOnTwoToneIcon color="primary" />
-                </ThemeProvider>
-                <Typography variant="h5">Locale</Typography>
-              </div>
+        {/*  */}
+        <Grid item xs={12} md={3}>
+          <Card
+            sx={{
+              width: 400,
+              backgroundColor: "secondary",
+            }}
+          >
+            <CardContent>
+              <Stack
+                divider={<Divider orientation="horizontal" flexItem />}
+                spacing={2}
+              >
+                <div className="centerTxt">
+                  <ThemeProvider theme={buttonTheme}>
+                    <LocationOnTwoToneIcon color="primary" />
+                  </ThemeProvider>
+                  <Typography variant="h5">Locale</Typography>
+                </div>
 
-              <Typography className="centerTxt" variant="subtitle2">
-                Saint Paul, MN
-              </Typography>
-            </Stack>
-          </CardContent>
-        </Card>
+                <Typography className="centerTxt" variant="subtitle2">
+                  Saint Paul, MN
+                </Typography>
+              </Stack>
+            </CardContent>
+          </Card>
+        </Grid>
 
-        <Card
-          sx={{
-            width: 400,
-            backgroundColor: "secondary",
-          }}
-        >
-          <CardContent>
-            <Stack
-              spacing={2}
-              divider={<Divider orientation="horizontal" flexItem />}
-            >
-              <div className="centerTxt">
-                <ThemeProvider theme={buttonTheme}>
-                  <MailTwoToneIcon color="primary" />
-                </ThemeProvider>
-                <Typography variant="h5">Email</Typography>
-              </div>
+        {/*  */}
+        <Grid item xs={12} md={1.5} />
+        {/*  */}
 
-              <Typography className="centerTxt" variant="subtitle2">
-                Jbarrett1347@gmail.com
-              </Typography>
-            </Stack>
-          </CardContent>
-        </Card>
-      </Stack>
-      <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
-        &copy; Jack Barrett 2021
-      </Typography>
+        {/*  */}
+        <Grid item xs={12} md={3}>
+          <Card
+            sx={{
+              width: 400,
+              backgroundColor: "secondary",
+            }}
+          >
+            <CardContent>
+              <Stack
+                spacing={2}
+                divider={<Divider orientation="horizontal" flexItem />}
+              >
+                <div className="centerTxt">
+                  <ThemeProvider theme={buttonTheme}>
+                    <MailTwoToneIcon color="primary" />
+                  </ThemeProvider>
+                  <Typography variant="h5">Email</Typography>
+                </div>
+
+                <Typography className="centerTxt" variant="subtitle2">
+                  Jbarrett1347@gmail.com
+                </Typography>
+              </Stack>
+            </CardContent>
+          </Card>
+        </Grid>
+        {/*  */}
+
+        {/*  */}
+        <Grid item xs={0.5} md={2} />
+        {/*  */}
+
+        {/*  */}
+        <Grid item xs={12} md={12}>
+          <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
+            &copy; Jack Barrett 2021
+          </Typography>
+          {/*  */}
+        </Grid>
+      </Grid>
     </Box>
   );
 }
