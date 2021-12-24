@@ -1,6 +1,8 @@
+import { isMobile } from "react-device-detect";
 import { Box, Grid, Button, Typography } from "@mui/material";
 
 function Portfolio() {
+
   return (
     <Box
       sx={{
@@ -50,15 +52,23 @@ function Portfolio() {
         <Grid item xs={1} md={1} />
 
         <Grid item xs={12} md={5}>
-          <iframe
+          {isMobile ? <iframe
             title="Presentation of the product"
-            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&width=560&t=6286"
-            width="560"
-            height="314"
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&t=6286"
+            width='350'
+            height='190'
             scrolling="no"
             frameBorder="0"
             allowFullScreen={true}
-          ></iframe>
+          /> : <iframe
+            title="Presentation of the product"
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&width=560&t=6286"
+            width='560'
+            height='314'
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen={true}
+          />}
         </Grid>
       </Grid>
     </Box>
