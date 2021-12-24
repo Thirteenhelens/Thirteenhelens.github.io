@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.profileContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
 .header {
   padding: 10px 16px;
   background: #555;
@@ -15,10 +26,9 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 .sticky + .content {
   padding-top: 102px;
 }
-
