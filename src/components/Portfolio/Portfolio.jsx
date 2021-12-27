@@ -67,7 +67,7 @@ function Portfolio() {
             height='314'
             scrolling="no"
             frameBorder="0"
-            allowFullScreen={true}
+            allowFullScreen={false}
           />}
         </Grid>
       </Grid>
