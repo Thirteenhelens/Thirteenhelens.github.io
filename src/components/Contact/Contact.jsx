@@ -1,3 +1,4 @@
+// MUI Imports:
 import {
   Box,
   Grid,
@@ -11,6 +12,9 @@ import {
 } from "@mui/material";
 import MailTwoToneIcon from "@mui/icons-material/MailTwoTone";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
+
+// Other Imports:
+import { isMobile } from "react-device-detect";
 
 function Contact() {
   const buttonTheme = createTheme({
@@ -31,16 +35,17 @@ function Contact() {
         backgroundColor: "primary.dark",
       }}
     >
-      <Grid container>
+      <Grid container sx={{ display: "flex", alignItems: "center" }}>
         <Grid item xs={12}>
           <Typography variant="h2" className="centerTxt" sx={{ pt: 8, pb: 10 }}>
             More me
           </Typography>
         </Grid>
 
-        <Grid item xs={0} md={2} />
+        {/* TOP GRID SPACER */}
+        <Grid item xs={0.5} md={2} lg={2} />
 
-        <Grid item xs={12} md={3}>
+        <Grid item xs={11.5} md={3} lg={3}>
           <Card
             sx={{
               width: 369,
@@ -67,9 +72,13 @@ function Contact() {
           </Card>
         </Grid>
 
-        <Grid item xs={0} md={1.5} />
+        {/* If on a mobile device, there is now spacing between the cards */}
+        {isMobile && <Grid item xs={12} sx={{ p: 2 }} />}
 
-        <Grid item xs={12} md={3}>
+        {/* MIDDLE GRID SPACER */}
+        <Grid item xs={0.5} md={1.5} lg={2} />
+
+        <Grid item xs={11.5} md={3} lg={3}>
           <Card
             sx={{
               width: 369,
@@ -96,7 +105,8 @@ function Contact() {
           </Card>
         </Grid>
 
-        <Grid item xs={0} md={2} />
+        {/* BOTTOM GRID SPACER */}
+        <Grid item xs={0.5} md={2} lg={2} />
 
         <Grid item xs={12} md={12}>
           <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
