@@ -81,7 +81,7 @@ function Profile() {
 
         <Grid item xs={12} md={6}>
           <Box sx={{ pt: 10 }}>
-            <Typography variant="h2" className="centerTxt">
+            <Typography variant="h1" className="centerTxt">
               Who am I?
             </Typography>
 

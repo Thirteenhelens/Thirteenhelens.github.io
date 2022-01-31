@@ -2,7 +2,6 @@ import { isMobile } from "react-device-detect";
 import { Box, Grid, Button, Typography } from "@mui/material";
 
 function Portfolio() {
-
   return (
     <Box
       sx={{
@@ -17,7 +16,11 @@ function Portfolio() {
             Portfolio
           </Typography>
         </Grid>
+        {/* End of Grid item #1 */}
+
         <Grid item xs={0.5} md={0.5} />
+        {/* End of Grid item #2 */}
+
         <Grid item xs={12} md={5} sx={{ pb: 4 }}>
           <Typography variant="h4" className="centerTxt" sx={{ pb: 2 }}>
             From The Apple Tree
@@ -45,31 +48,112 @@ function Portfolio() {
             }}
             style={{ margin: "0 auto", display: "flex" }}
           >
-            Check it out
+            Check it out on GitHub
           </Button>
         </Grid>
+        {/* End of Grid item #3 */}
 
         <Grid item xs={1} md={1} />
+        {/* End of Grid item #4 */}
 
         <Grid item xs={12} md={5}>
-          {isMobile ? <iframe
-            title="Presentation of the product"
-            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&t=6286"
-            width='350'
-            height='190'
-            scrolling="no"
-            frameBorder="0"
-            allowFullScreen={true}
-          /> : <iframe
-            title="Presentation of the product"
-            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&width=560&t=6286"
-            width='560'
-            height='314'
-            scrolling="no"
-            frameBorder="0"
-            allowFullScreen={true}
-          />}
+          {isMobile ? (
+            <iframe
+              title="Presentation of the product"
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&t=6286"
+              width="350"
+              height="190"
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+            />
+          ) : (
+            <iframe
+              title="Presentation of the product"
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&width=560&t=6286"
+              width="560"
+              height="314"
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+            />
+          )}
         </Grid>
+        {/* End of Grid item #5 */}
+
+        <Grid item xs={0.5} md={0.5} />
+        {/* End of Grid item #6 */}
+
+        {/* HALFWAY POINT */}
+        <Grid item xs={12}>
+          <br /> <br />
+        </Grid>
+
+        <Grid item xs={12} md={5} sx={{ pl: 3 }}>
+          {isMobile ? (
+            <img
+              width="350"
+              height="190"
+              src="../SC_LANG_MAP_SC.png"
+              alt="South Carolina Language Map homepage screenshot"
+            />
+          ) : (
+            <img
+              width="560"
+              height="314"
+              src="../SC_LANG_MAP_SC.png"
+              alt="South Carolina Language Map homepage screenshot"
+            />
+          )}
+        </Grid>
+        {/* End of Grid item #7 */}
+
+        <Grid item xs={1} md={1} />
+        {/* End of Grid item #8 */}
+
+        <Grid item xs={12} md={5}>
+          <Typography variant="h4" className="centerTxt" sx={{ pb: 2 }}>
+            South Carolina Language Map
+          </Typography>
+          <Typography variant="subtitle1" className="centerTxt">
+            Is a Full Stack web application for collecting and displaying sites
+            in South Carolina where specific languages are spoken, and providing
+            access to that data by both researchers and casual users. Sites are
+            displayed on a map, are searchable, and display the details of the
+            language spoken there.
+          </Typography>
+          <br />
+          <Button
+            size="medium"
+            color="secondary"
+            variant="contained"
+            onClick={() => {
+              window.open(
+                "https://github.com/Thirteenhelens/South_Carolina_Language_Map",
+                "_blank"
+              );
+            }}
+            style={{ margin: "0 auto", display: "flex" }}
+          >
+            Check it out on GitHub
+          </Button>
+          <br />
+          <Button
+            size="medium"
+            color="secondary"
+            variant="contained"
+            onClick={() => {
+              window.open("https://languagemapsc.herokuapp.com", "_blank");
+            }}
+            style={{ margin: "0 auto", display: "flex" }}
+          >
+            Visit the site
+          </Button>
+        </Grid>
+        {/* End of Grid item #9 */}
+
+        <Grid item xs={0.5} md={0.5} />
+        {/* End of Grid item #10 */}
       </Grid>
     </Box>
   );
