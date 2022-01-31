@@ -1,6 +1,5 @@
 import "./App.css";
 import * as React from "react";
-import { Grid } from "@mui/material";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Profile from "../Profile/Profile";
@@ -29,23 +28,10 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        {/* <Grid container> */}
-          {/* <Grid item xs={12}> */}
-            <Header />
-          {/* </Grid> */}
-
-          {/* <Grid item xs={12}> */}
-            <Profile />
-          {/* </Grid> */}
-
-          {/* <Grid item xs={12}> */}
-            <Portfolio />
-          {/* </Grid> */}
-
-          {/* <Grid item xs={12}> */}
-            <Contact />
-          {/* </Grid>
-        </Grid> */}
+        <Header />
+        <Profile />
+        <Portfolio />
+        <Contact />
         <Footer />
       </ThemeProvider>
     </div>
