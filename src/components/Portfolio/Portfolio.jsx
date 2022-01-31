@@ -18,14 +18,16 @@ function Portfolio() {
         </Grid>
         {/* End of Grid item #1 */}
 
-        <Grid item xs={0.5} md={0.5} />
+        <Grid item xs={0.5} md={1} />
         {/* End of Grid item #2 */}
 
-        <Grid item xs={12} md={5} sx={{ pb: 4 }}>
-          <Typography variant="h4" className="centerTxt" sx={{ pb: 2 }}>
+        <Grid item xs={12} md={4} sx={{ pb: 4 }}>
+          <Typography variant="h3" className="centerTxt" sx={{ pb: 2 }}>
             From The Apple Tree
           </Typography>
-          <Typography variant="subtitle1" className="centerTxt">
+          <br />
+          <br />
+          <Typography variant="h6" className="centerTxt">
             Is an application aimed at the non-tech-savvy Apple user on the hunt
             for a new computer. With an account, a user can peruse Apple's
             product lineup through a simple table view, or recommend devices
@@ -53,10 +55,10 @@ function Portfolio() {
         </Grid>
         {/* End of Grid item #3 */}
 
-        <Grid item xs={1} md={1} />
+        <Grid item xs={1} md={2} />
         {/* End of Grid item #4 */}
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={4}>
           {isMobile ? (
             <iframe
               title="Presentation of the product"
@@ -71,8 +73,10 @@ function Portfolio() {
             <iframe
               title="Presentation of the product"
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fprimedigitalacademy%2Fvideos%2F299468172061362%2F&show_text=false&width=560&t=6286"
-              width="560"
-              height="314"
+              // width="850"
+              // height="500"
+              width="100%"
+              height="100%"
               scrolling="no"
               frameBorder="0"
               allowFullScreen={true}
@@ -81,15 +85,18 @@ function Portfolio() {
         </Grid>
         {/* End of Grid item #5 */}
 
-        <Grid item xs={0.5} md={0.5} />
+        <Grid item xs={0.5} md={1} />
         {/* End of Grid item #6 */}
 
         {/* HALFWAY POINT */}
         <Grid item xs={12}>
           <br /> <br />
+          
         </Grid>
 
-        <Grid item xs={12} md={5} sx={{ pl: 3 }}>
+        <Grid item md={1} />
+
+        <Grid item xs={12} md={4}>
           {isMobile ? (
             <img
               width="350"
@@ -99,8 +106,10 @@ function Portfolio() {
             />
           ) : (
             <img
-              width="560"
-              height="314"
+              // width="850"
+              // height="500"
+              width="100%"
+              height="100%"
               src="../SC_LANG_MAP_SC.png"
               alt="South Carolina Language Map homepage screenshot"
             />
@@ -108,14 +117,16 @@ function Portfolio() {
         </Grid>
         {/* End of Grid item #7 */}
 
-        <Grid item xs={1} md={1} />
+        <Grid item md={2} />
         {/* End of Grid item #8 */}
 
-        <Grid item xs={12} md={5}>
-          <Typography variant="h4" className="centerTxt" sx={{ pb: 2 }}>
+        <Grid item xs={12} md={4}>
+          <Typography variant="h3" className="centerTxt">
             South Carolina Language Map
           </Typography>
-          <Typography variant="subtitle1" className="centerTxt">
+          <br />
+          <br />
+          <Typography variant="h6" className="centerTxt">
             Is a Full Stack web application for collecting and displaying sites
             in South Carolina where specific languages are spoken, and providing
             access to that data by both researchers and casual users. Sites are
@@ -124,7 +135,7 @@ function Portfolio() {
           </Typography>
           <br />
           <Button
-            size="medium"
+            size="large"
             color="secondary"
             variant="contained"
             onClick={() => {
@@ -139,7 +150,7 @@ function Portfolio() {
           </Button>
           <br />
           <Button
-            size="medium"
+            size="large"
             color="secondary"
             variant="contained"
             onClick={() => {
@@ -152,7 +163,7 @@ function Portfolio() {
         </Grid>
         {/* End of Grid item #9 */}
 
-        <Grid item xs={0.5} md={0.5} />
+        <Grid item md={1} />
         {/* End of Grid item #10 */}
       </Grid>
     </Box>

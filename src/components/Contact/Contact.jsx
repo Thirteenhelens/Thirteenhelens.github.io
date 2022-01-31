@@ -76,7 +76,7 @@ function Contact() {
         {isMobile && <Grid item xs={12} sx={{ p: 2 }} />}
 
         {/* MIDDLE GRID SPACER */}
-        <Grid item xs={0.5} md={1.5} lg={2} />
+        <Grid item xs={0.5} md={2} lg={2} />
 
         <Grid item xs={11.5} md={3} lg={3}>
           <Card
@@ -107,12 +107,6 @@ function Contact() {
 
         {/* BOTTOM GRID SPACER */}
         <Grid item xs={0.5} md={2} lg={2} />
-
-        <Grid item xs={12} md={12}>
-          <Typography variant="body1" className="centerTxt" sx={{ mt: 10 }}>
-            &copy; Jack Barrett 2021
-          </Typography>
-        </Grid>
       </Grid>
     </Box>
   );

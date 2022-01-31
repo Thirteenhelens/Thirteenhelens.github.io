@@ -2,6 +2,7 @@ import "./App.css";
 import * as React from "react";
 import { Grid } from "@mui/material";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import Profile from "../Profile/Profile";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
@@ -28,23 +29,24 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Grid container>
-          <Grid item xs={12}>
+        {/* <Grid container> */}
+          {/* <Grid item xs={12}> */}
             <Header />
-          </Grid>
+          {/* </Grid> */}
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}> */}
             <Profile />
-          </Grid>
+          {/* </Grid> */}
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}> */}
             <Portfolio />
-          </Grid>
+          {/* </Grid> */}
 
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}> */}
             <Contact />
-          </Grid>
-        </Grid>
+          {/* </Grid>
+        </Grid> */}
+        <Footer />
       </ThemeProvider>
     </div>
   );
